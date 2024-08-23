@@ -1,0 +1,76 @@
+/* color pallet source: https://coolors.co/palette/3d5a80-98c1d9-e0fbfc-ee6c4d-293241 */
+
+:root {
+  --primary-color: #EE6C4D;
+  --text-primary-color: #293241;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  font-family: Andika, sans-serif;
+  font-size: 18px;
+}
+
+header {
+  color: var(--text-primary-color);
+  background: var(--primary-color);
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+nav {
+  background-color: #3D5A80;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:last-child {
+  float: right;
+}
+
+nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav a:hover {
+  background-color: var(--text-primary-color);
+}
+
+footer {
+  padding: 5px;
+  text-align: center;
+  color: var(--text-primary-color);
+  background-color: #98C1D9;
+}
+
+@media screen and (max-width: 600px) {
+  nav a, nav a:last-child {
+    float: none;
+  }
+}
+
