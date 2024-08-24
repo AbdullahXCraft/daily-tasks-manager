@@ -89,7 +89,7 @@ footer {
   background-color: var(--secondary-color);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   nav a, nav a:last-child {
     float: none;
   }

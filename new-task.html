@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/new-task.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/excite-bike/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js" integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/69bfcdc82f.js" crossorigin="anonymous"></script>
+    <script src="scripts/new-task.js"></script>
+    <title>Daily Task Manager</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html"><i class="fa-solid fa-house"></i> &vert; Home</a>
+      <a class="active" href="/new-task.html">New Task</a>
+      <a href="">Manage Tasks</a>
+      <a href="">Previous Days</a>
+      <a href="">Info</a>
+    </nav>
+    <header>
+      <h1>New Task</h1>
+      <p>Fill the fields and press <span>Add</span> to add a new task.</p>
+    </header>
+    <main>
+      <section>
+        <input type="text" id="task-name" placeholder="Enter task name">
+        <input type="text" id="task-desc" placeholder="Enter task description (optional)">
+        <select class="task-repeat">
+          <option value="day">Every Day</option>
+          <option value="week">Every Week</option>
+          <option value="month">Every Month</option>
+        </select>
+        <select class="task-repeat">
+          <option value="day">Every Day</option>
+          <option value="week">Every Week</option>
+          <option value="month">Every Month</option>
+        </select>
+      </section>
+      <button>Add</button>
+    </main>
+    <footer>
+      <p>Made by Abdullah Babrahem in 2024.</p>
+    </footer>
+  </body>
+</html>
