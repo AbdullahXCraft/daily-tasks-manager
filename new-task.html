@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/shared.css">
-    <link rel="stylesheet" href="styles/new-task.css">
+    <link rel="stylesheet" href="styles/shared/shared.css">
+    <link rel="stylesheet" href="styles/new-task/new-task.css">
+    <link rel="stylesheet" href="styles/shared/custom-checkbox.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/excite-bike/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="styles/jquery-ui.theme.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js" integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/69bfcdc82f.js" crossorigin="anonymous"></script>
@@ -28,7 +30,17 @@
       <p>Fill the fields and press <span>Add</span> to add a new task.</p>
     </header>
     <main>
-      <section>
+      <section class="task-preview">
+        <div class="task-preview-details">
+          <h3 id="preview-name">Preview Name</h6>
+          <p id="preview-desc">Preview Description</p>
+        </div>
+        <label class="container">Done
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </section>
+      <section class="input-fields">
         <input type="text" id="task-name" placeholder="Enter task name">
         <input type="text" id="task-desc" placeholder="Enter task description (optional)">
         <select class="task-repeat">
@@ -41,9 +53,14 @@
           <option value="week">Every Week</option>
           <option value="month">Every Month</option>
         </select>
+        <button>Add</button>
       </section>
-      <button>Add</button>
     </main>
+    <select class="task-repeat">
+      <option value="day">Every Day</option>
+      <option value="week">Every Week</option>
+      <option value="month">Every Month</option>
+    </select>
     <footer>
       <p>Made by Abdullah Babrahem in 2024.</p>
     </footer>
