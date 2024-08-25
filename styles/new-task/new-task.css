@@ -54,6 +54,10 @@ input {
   padding-left: 14px;
 }
 
+.overflow {
+  height: 200px;
+}
+
 .ui-selectmenu-button {
   background: none !important;
   font-family: inherit !important;
@@ -66,6 +70,10 @@ input {
   border-radius: 4px !important;
   padding-left: 14px !important;
   width: 100% !important;
+}
+
+.ui-state-disabled {
+  opacity: 0.5 !important;
 }
 
 input::placeholder {

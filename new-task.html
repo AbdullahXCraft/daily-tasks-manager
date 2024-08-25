@@ -14,7 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js" integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/69bfcdc82f.js" crossorigin="anonymous"></script>
-    <script src="scripts/new-task.js"></script>
+    <script src="scripts/new-task.js" type="module"></script>
     <title>Daily Task Manager</title>
   </head>
   <body>
@@ -36,31 +36,25 @@
           <p id="preview-desc">Preview Description</p>
         </div>
         <label class="container">Done
-          <input type="checkbox" checked="checked">
+          <input type="checkbox">
           <span class="checkmark"></span>
         </label>
       </section>
       <section class="input-fields">
         <input type="text" id="task-name" placeholder="Enter task name">
         <input type="text" id="task-desc" placeholder="Enter task description (optional)">
-        <select class="task-repeat">
+        <select class="task-repeat" id="task-repeat">
+          <option disabled="" selected="">Repeat Every</option>
           <option value="day">Every Day</option>
           <option value="week">Every Week</option>
           <option value="month">Every Month</option>
         </select>
-        <select class="task-repeat">
-          <option value="day">Every Day</option>
-          <option value="week">Every Week</option>
-          <option value="month">Every Month</option>
+        <select class="task-repeat" id="task-repeat-every">
+          <option value="1" disabled="" selected="">Unavailable</option>
         </select>
         <button>Add</button>
       </section>
     </main>
-    <select class="task-repeat">
-      <option value="day">Every Day</option>
-      <option value="week">Every Week</option>
-      <option value="month">Every Month</option>
-    </select>
     <footer>
       <p>Made by Abdullah Babrahem in 2024.</p>
     </footer>
