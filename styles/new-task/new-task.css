@@ -1,32 +1,6 @@
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 0;
-}
-
-section.task-preview {
-  background-color: var(--primary-text-color);
-  color: var(--primary-color);
-  width: 90%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  padding: 14px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 10px;
-}
-
-#preview-name,
-#preview-desc {
-  line-height: 0.5em;
-  text-align: start;
-}
-
-section.task-preview .container {
-  margin-right: 20px;
+section.task-info {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 section.input-fields {

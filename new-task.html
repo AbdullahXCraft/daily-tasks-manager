@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/shared/shared.css">
-    <link rel="stylesheet" href="styles/new-task/new-task.css">
+    <link rel="stylesheet" href="styles/shared/task-details.css">
     <link rel="stylesheet" href="styles/shared/custom-checkbox.css">
+    <link rel="stylesheet" href="styles/new-task/new-task.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -30,10 +31,10 @@
       <p>Fill the fields and press <span>Add</span> to add a new task.</p>
     </header>
     <main>
-      <section class="task-preview">
-        <div class="task-preview-details">
-          <h3 id="preview-name">Preview Name</h6>
-          <p id="preview-desc">Preview Description</p>
+      <section class="task-info">
+        <div class="task-details">
+          <h3 id="task-name">Preview Name</h6>
+          <p id="task-desc">Preview Description</p>
         </div>
         <label class="container">Done
           <input type="checkbox">
@@ -41,8 +42,8 @@
         </label>
       </section>
       <section class="input-fields">
-        <input type="text" id="task-name" placeholder="Enter task name">
-        <input type="text" id="task-desc" placeholder="Enter task description (optional)">
+        <input type="text" id="task-name-input" placeholder="Enter task name">
+        <input type="text" id="task-desc-input" placeholder="Enter task description (optional)">
         <select class="task-repeat" id="task-repeat">
           <option disabled="" selected="">Repeat Every</option>
           <option value="day">Every Day</option>
@@ -50,7 +51,7 @@
           <option value="month">Every Month</option>
         </select>
         <select class="task-repeat" id="task-repeat-every">
-          <option value="1" disabled="" selected="">Unavailable</option>
+          <option disabled="" selected="">Unavailable</option>
         </select>
         <button>Add</button>
       </section>

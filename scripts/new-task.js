@@ -58,28 +58,28 @@ $(function () {
     }
   }).selectmenu( "menuWidget" ).addClass( "overflow" );
   $('input[type="text"]').on('keyup', () => {
-    if (!$('#task-name').val()) {
-      $('#preview-name').html('Preview Name');
+    if (!$('#task-name-input').val()) {
+      $('#task-name').html('Preview Name');
     } else {
-      $('#preview-name').html($('#task-name').val());
+      $('#task-name').html($('#task-name-input').val());
     }
-    if (!$('#task-desc').val()) {
-      $('#preview-desc').html('Preview Description');
+    if (!$('#task-desc-input').val()) {
+      $('#task-desc').html('Preview Description');
     } else {
-      $('#preview-desc').html($('#task-desc').val());
+      $('#task-desc').html($('#task-desc-input').val());
     }
   });
   $('button').on('click', () => {
     console.log($('#task-repeat-every').val());
     if ($('#task-repeat').val() === 'day') {
-      if ($('#task-name').val() && $('#task-repeat').val()) {
-        tasks.addTask($('#task-name').val(), $('#task-desc').val(), $('#task-repeat').val(), $('#task-repeat-every').val());
+      if ($('#task-name-input').val() && $('#task-repeat').val()) {
+        tasks.addTask($('#task-name-input').val(), $('#task-desc-input').val(), $('#task-repeat').val(), $('#task-repeat-every').val());
       } else {
         console.log('All non optional fields must be filled');
       }
     } else {
-      if ($('#task-name').val() && $('#task-repeat').val() && $('#task-repeat-every').val()) {
-        tasks.addTask($('#task-name').val(), $('#task-desc').val(), $('#task-repeat').val(), $('#task-repeat-every').val());
+      if ($('#task-name-input').val() && $('#task-repeat').val() && $('#task-repeat-every').val()) {
+        tasks.addTask($('#task-name').val(), $('#task-desc-input').val(), $('#task-repeat').val(), $('#task-repeat-every').val());
       } else {
         console.log('All non optional fields must be filled');
       }

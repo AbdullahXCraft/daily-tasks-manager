@@ -1,0 +1,21 @@
+section.task-info {
+  background-color: var(--primary-text-color);
+  color: var(--primary-color);
+  width: 90%;
+  border-radius: 5px;
+  padding: 14px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+#task-name,
+#task-desc {
+  line-height: 0.5em;
+  text-align: start;
+}
+
+section.task-details .container {
+  margin-right: 20px;
+}
