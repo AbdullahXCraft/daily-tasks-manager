@@ -71,7 +71,6 @@ $(function () {
     }
   });
   $('button').on('click', () => {
-    console.log($('#task-repeat-every').val());
     if ($('#task-repeat').val() === 'day') {
       if ($('#task-name-input').val() && $('#task-repeat').val()) {
         tasks.addTask($('#task-name-input').val(), $('#task-desc-input').val(), $('#task-repeat').val(), $('#task-repeat-every').val());
@@ -97,6 +96,6 @@ function alertNotification(text, type) {
     $('.alert').addClass(`alert-${type}`);
     $('#alert-icon').removeClass('fa-triangle-exclamation fa-check');
     $('#alert-icon').addClass(type === 'success' ? 'fa-check' : 'fa-triangle-exclamation');
-    $('.alert').fadeIn(300).delay( 2000 ).fadeOut(1000);
+    $('.alert').slideDown(300).delay( 2000 ).slideUp(1000);
   }
 }

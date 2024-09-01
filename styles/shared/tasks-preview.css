@@ -4,6 +4,10 @@ section.task-info:nth-child(even) {
 }
 
 section.task-info {
+  border-radius: 0;
+}
+
+section.task-info:only-child {
   border-radius: 5px;
 }
 

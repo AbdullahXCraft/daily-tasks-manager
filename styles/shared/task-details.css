@@ -16,6 +16,10 @@ section.task-info {
   text-align: start;
 }
 
+#task-desc {
+  line-height: 1em;
+}
+
 section.task-details .container {
   margin-right: 20px;
 }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/69bfcdc82f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/shared/shared.css">
+    <link rel="stylesheet" href="styles/shared/task-details.css">
+    <link rel="stylesheet" href="styles/shared/tasks-preview.css">
+    <link rel="stylesheet" href="styles/manage-tasks/manage-tasks.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="styles/jquery-ui.theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js" integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script type="module" src="scripts/manage-tasks.js"></script>
+    <title>Daily Task Manager: Manage Tasks</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html"><i class="fa-solid fa-house"></i> &vert; Home</a>
+      <a href="/new-task.html">New Task</a>
+      <a class="active" href="">Manage Tasks</a>
+      <a href="">Previous Days</a>
+      <a href="">Info</a>
+    </nav>
+    <header>
+      <h1>Manage Tasks</h1>
+      <p>Rearrange, Delete and Edit Tasks</p>
+    </header>
+    <main>
+      <section class="task-info">
+        <div class="task-details">
+          <h3 id="task-name">Preview Task</h6>
+          <p id="task-desc">Preview Description</p>
+        </div>
+        <div class="action-list">
+          <button class="edit-action">Edit</button>
+          <button class="move-up-action"><i class="fa-solid fa-angle-up"></i></button>
+          <button class="remove-action">Remove</button>
+          <button class="move-down-action"><i class="fa-solid fa-angle-down"></i></button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Made by Abdullah Babrahem in 2024.</p>
+    </footer>
+    <div id="dialog-confirm" title="Remove Task?">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <p>This task and all its data including all data about previous days will be permanently deleted and cannot be recovered. Are you sure?</p>
+    </div>
+  </body>
+</html>
