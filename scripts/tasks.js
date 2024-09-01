@@ -7,7 +7,7 @@ export class TaskRecord {
   }
 
   #loadFromStorage() {
-    this.taskItems = JSON.parse(localStorage.getItem(this.#localStorageKey)) || [{"taskName":"Do Laundry","taskDesc":"Ps don't forget to clean the ropes","taskRepeat":"day","taskRepeatEvery":null,"done":true}];
+    this.taskItems = JSON.parse(localStorage.getItem(this.#localStorageKey)) || [{"taskName":"Do Laundry","taskDesc":"Ps don't forget to clean the ropes","taskRepeat":"day","taskRepeatEvery":null,"done":['01/09/2024']}];
   }
 
   addTask(taskName, taskDesc, taskRepeat, taskRepeatEvery) {
@@ -19,7 +19,7 @@ export class TaskRecord {
       taskDesc,
       taskRepeat,
       taskRepeatEvery,
-      done: false
+      done: []
     }
     this.taskItems.push(newTask);
     this.saveToStorage();
@@ -30,24 +30,17 @@ export class TaskRecord {
   }
 
   toggleDone(index) {
-    this.taskItems[index].done = taskItems[index].done ? false : true;
+    if (this.taskItems[index].done.includes(dayjs().format('DD/MM/YYYY'))) {
+      this.taskItems[index].done.splice(this.taskItems[index].done.indexOf(dayjs().format('DD/MM/YYYY')), 1);
+    } else {
+      this.taskItems[index].done.push(dayjs().format('DD/MM/YYYY'));
+    }
+    console.log(this.taskItems[index].done);
     this.saveToStorage();
   }
 
-  updateTask (index, taskDetails) {
-    if (taskDetails.hasOwnProperty('taskName')) {
-      this.taskItems[index].taskName = taskDetails.taskName;
-    } 
-    if (taskDetails.hasOwnProperty('taskDesc')) {
-      this.taskItems[index].taskDesc = taskDetails.taskDesc;
-    } 
-    if (taskDetails.hasOwnProperty('taskRepeat')) {
-      this.taskItems[index].taskRepeat = taskDetails.taskRepeat;
-    } 
-    if (taskDetails.hasOwnProperty('taskRepeatEvery')) {
-      this.taskItems[index].taskRepeatEvery = taskDetails.taskRepeatEvery;
-    }
-    this.saveToStorage();
+  test() {
+    console.log(dayjs());
   }
 
   saveToStorage() {

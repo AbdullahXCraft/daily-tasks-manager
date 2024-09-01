@@ -71,6 +71,7 @@ $(function () {
     }
   });
   $('button').on('click', () => {
+    console.log($('#task-repeat-every').val());
     if ($('#task-repeat').val() === 'day') {
       if ($('#task-name-input').val() && $('#task-repeat').val()) {
         tasks.addTask($('#task-name-input').val(), $('#task-desc-input').val(), $('#task-repeat').val(), $('#task-repeat-every').val());
