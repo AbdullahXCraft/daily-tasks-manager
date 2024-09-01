@@ -1,0 +1,15 @@
+section.task-info:nth-child(even) {
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+}
+
+section.task-info {
+  border-radius: 5px;
+}
+
+section.task-info:last-child:not(:only-child) {
+  border-radius: 0 0 5px 5px;
+}
+section.task-info:first-child:not(:only-child) {
+  border-radius: 5px 5px 0 0;
+}

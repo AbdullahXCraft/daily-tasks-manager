@@ -7,15 +7,21 @@ export class TaskRecord {
   }
 
   #loadFromStorage() {
-    this.taskItems = JSON.parse(localStorage.getItem(this.#localStorageKey)) || [];
+    this.taskItems = JSON.parse(localStorage.getItem(this.#localStorageKey)) || [{"taskName":"Do Laundry","taskDesc":"Ps don't forget to clean the ropes","taskRepeat":"day","taskRepeatEvery":null,"done":true}];
   }
 
-  addTask(taskName, taskDesc = '', taskRepeat, taskRepeatEvery) {
-    if (arguments.length === 3) {
-      this.taskItems.push(new Task(taskName, '', taskDesc, taskRepeat));
-    } else {
-      this.taskItems.push(new Task(taskName, taskDesc, taskRepeat, taskRepeatEvery));
+  addTask(taskName, taskDesc, taskRepeat, taskRepeatEvery) {
+    if (!taskDesc) {
+      taskDesc = 'No description.';
     }
+    const newTask = {
+      taskName,
+      taskDesc,
+      taskRepeat,
+      taskRepeatEvery,
+      done: false
+    }
+    this.taskItems.push(newTask);
     this.saveToStorage();
   }
 
@@ -24,7 +30,7 @@ export class TaskRecord {
   }
 
   toggleDone(index) {
-    this.taskItems[index].updateTaskCompletion();
+    this.taskItems[index].done = taskItems[index].done ? false : true;
     this.saveToStorage();
   }
 
@@ -46,24 +52,5 @@ export class TaskRecord {
 
   saveToStorage() {
     localStorage.setItem(this.#localStorageKey, JSON.stringify(this.taskItems));
-  }
-}
-
-export class Task {
-  taskName;
-  taskDesc;
-  taskRepeat;
-  taskRepeatEvery;
-  done = false;
-
-  constructor(taskName, taskDesc = '', taskRepeat, taskRepeatEvery) {
-    this.taskName = taskName;
-    this.taskDesc = taskDesc;
-    this.taskRepeat = taskRepeat;
-    this.taskRepeatEvery = taskRepeatEvery;
-  }
-
-  updateTaskCompletion() {
-    this.done = this.done ? false : true;
   }
 }

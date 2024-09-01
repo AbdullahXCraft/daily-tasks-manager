@@ -76,12 +76,35 @@ button:hover {
   outline: none;
 }
 
+div.alert {
+  grid-column: span 2; 
+  text-align: start;
+  padding: 4px 20px;
+  border-radius: 5px;
+}
+
+div.alert p {
+  display: inline-block;
+  margin-left: 10px;
+  line-height: 0.8rem;
+}
+
+.alert-error {
+  background-color: #f94144;
+}
+
+.alert-success {
+  background-color: mediumseagreen;
+}
+
+
 @media screen and (max-width: 800px) {
   section.input-fields {
     grid-template-columns: 1fr;
   }
 
-  button {
+  button,
+  div.alert {
     grid-column: span 1;
   }
 }

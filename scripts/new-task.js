@@ -1,5 +1,6 @@
 import { TaskRecord } from "./tasks.js";
 $(function () {
+  $('.alert').fadeOut(0);
   const tasks = new TaskRecord('tasks');
   $('#task-repeat').selectmenu({
     icons: { 
@@ -70,20 +71,31 @@ $(function () {
     }
   });
   $('button').on('click', () => {
-    console.log($('#task-repeat-every').val());
     if ($('#task-repeat').val() === 'day') {
       if ($('#task-name-input').val() && $('#task-repeat').val()) {
         tasks.addTask($('#task-name-input').val(), $('#task-desc-input').val(), $('#task-repeat').val(), $('#task-repeat-every').val());
+        alertNotification('Task has been added successfully.', 'success');
       } else {
-        console.log('All non optional fields must be filled');
+        alertNotification('All non optional fields must be filled.', 'error');
       }
     } else {
       if ($('#task-name-input').val() && $('#task-repeat').val() && $('#task-repeat-every').val()) {
-        tasks.addTask($('#task-name').val(), $('#task-desc-input').val(), $('#task-repeat').val(), $('#task-repeat-every').val());
+        tasks.addTask($('#task-name-input').val(), $('#task-desc-input').val(), $('#task-repeat').val(), $('#task-repeat-every').val());
+        alertNotification('Task has been added successfully.', 'success');
       } else {
-        console.log('All non optional fields must be filled');
+        alertNotification('All non optional fields must be filled.', 'error');
       }
     }
-    console.log(tasks.taskItems);
   });
 });
+
+function alertNotification(text, type) {
+  if ($('.alert').queue().length === 0) {
+    $('#alert-message').text(text);
+    $('.alert').removeClass('alert-error alert-success');
+    $('.alert').addClass(`alert-${type}`);
+    $('#alert-icon').removeClass('fa-triangle-exclamation fa-check');
+    $('#alert-icon').addClass(type === 'success' ? 'fa-check' : 'fa-triangle-exclamation');
+    $('.alert').fadeIn(300).delay( 2000 ).fadeOut(1000);
+  }
+}
