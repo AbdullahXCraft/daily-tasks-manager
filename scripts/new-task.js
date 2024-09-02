@@ -17,7 +17,7 @@ $(function () {
       const taskRepeatVal = $('#task-repeat').val();
       if (taskRepeatVal === 'week') {
         taskRepeatEveryElem.html(`
-          <option disabled="" selected="">Week day</option>
+          <option value="" disabled="" selected="">Week day</option>
           <option value="sun">Every Sunday</option>
           <option value="mon">Every Monday</option>
           <option value="tue">Every Tuesday</option>
@@ -27,7 +27,7 @@ $(function () {
           <option value="sat">Every Saturday</option>
       `).selectmenu('enable');
       } else if (taskRepeatVal === 'month') {
-        let options = '<option disabled="" selected="">Month day</option>';
+        let options = '<option value="" disabled="" selected="">Month day</option>';
         for (let index = 1; index < 30; index++) {
           let ordinalSuffix = 'th';
           if (index === 1) {
@@ -65,26 +65,25 @@ $(function () {
       $('#task-name').html($('#task-name-input').val());
     }
     if (!$('#task-desc-input').val()) {
-      $('#task-desc').html('Preview Description');
+      $('#task-desc').html('No Description.');
     } else {
       $('#task-desc').html($('#task-desc-input').val());
     }
   });
   $('button').on('click', () => {
-    if ($('#task-repeat').val() === 'day') {
-      if ($('#task-name-input').val() && $('#task-repeat').val()) {
-        tasks.addTask($('#task-name-input').val(), $('#task-desc-input').val(), $('#task-repeat').val(), $('#task-repeat-every').val());
-        alertNotification('Task has been added successfully.', 'success');
-      } else {
-        alertNotification('All non optional fields must be filled.', 'error');
-      }
+    const isValidInput = $('.input-fields #task-repeat').val() === 'day' && $('.input-fields #task-name-input').val() && $('.input-fields #task-repeat').val() || $('.input-fields #task-name-input').val() && $('.input-fields #task-repeat').val() && $('.input-fields #task-repeat-every').val();
+    if (isValidInput) {
+      tasks.addTask($('#task-name-input').val(), $('#task-desc-input').val(), $('#task-repeat').val(), $('#task-repeat-every').val());
+      $('#task-name-input').val('').trigger('keyup');
+      $('#task-desc-input').val('').trigger('keyup');
+      $('#task-repeat').val('');
+      $('#task-repeat').selectmenu("refresh");
+      $('#task-repeat-every').html('<option value="day" disabled="" selected="">Unavailable</option>').selectmenu('disable');
+      $('#task-repeat-every').val('');
+      $('#task-repeat-every').selectmenu("refresh");
+      alertNotification('Task has been added successfully.', 'success');
     } else {
-      if ($('#task-name-input').val() && $('#task-repeat').val() && $('#task-repeat-every').val()) {
-        tasks.addTask($('#task-name-input').val(), $('#task-desc-input').val(), $('#task-repeat').val(), $('#task-repeat-every').val());
-        alertNotification('Task has been added successfully.', 'success');
-      } else {
-        alertNotification('All non optional fields must be filled.', 'error');
-      }
+      alertNotification('All non optional fields must be filled.', 'error');
     }
   });
 });

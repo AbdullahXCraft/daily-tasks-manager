@@ -7,7 +7,7 @@ $(function () {
     autoOpen: false,
     resizable: false,
     height: "auto",
-    width: 'min(100vw, 500px)',
+    width: 'min(100vw, 700)',
     modal: true,
     show: { effect: "scale", duration: 200 },
     hide: { effect: "scale", duration: 200 }
@@ -17,7 +17,7 @@ $(function () {
     height: 500,
     minWidth: 500,
     minHeight: 500,
-    width: 'min(100vw, 500px)',
+    width: 'min(100vw, 700px)',
     modal: true,
     open: function() {
       $('.alert').fadeOut(0);
@@ -204,4 +204,10 @@ $(function () {
       });
     });
   }
+  $(window).on("orientationchange", () => {
+    setTimeout(() => {
+      $( "#dialog-form" ).dialog("option", "position", { my: "center", at: "center", of: window });
+      $( "#dialog-confirm" ).dialog("option", "position", { my: "center", at: "center", of: window });
+    }, 100);
+  });
 });

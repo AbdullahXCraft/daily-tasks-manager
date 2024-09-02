@@ -86,12 +86,15 @@ div.alert {
   text-align: start;
   padding: 4px 20px;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: start;
 }
 
 div.alert p {
   display: inline-block;
   margin-left: 10px;
-  line-height: 0.8rem;
 }
 
 .alert-error {
@@ -111,6 +114,14 @@ div.alert p {
   button,
   div.alert {
     grid-column: span 1;
+  }
+
+
+}
+@media screen and (max-width: 600px) {
+  .task-info,
+  section.input-fields {
+    min-width: 100%;
   }
 }
 

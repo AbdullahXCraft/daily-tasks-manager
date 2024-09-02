@@ -221,3 +221,9 @@ input:active,
 .ui-dialog:has(#dialog-confirm) {
   border: none;
 }
+
+@media screen and (max-width: 600px) {
+  .task-info {
+    min-width: 100%;
+  }
+}
