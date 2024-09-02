@@ -7,7 +7,7 @@ $(function () {
     autoOpen: false,
     resizable: false,
     height: "auto",
-    width: 'min(90%, 600px)',
+    width: 'min(100vw, 500px)',
     modal: true,
     show: { effect: "scale", duration: 200 },
     hide: { effect: "scale", duration: 200 }
@@ -17,7 +17,7 @@ $(function () {
     height: 500,
     minWidth: 500,
     minHeight: 500,
-    width: 'min(90%, 500px)',
+    width: 'min(100vw, 500px)',
     modal: true,
     open: function() {
       $('.alert').fadeOut(0);

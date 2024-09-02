@@ -93,14 +93,11 @@ button:active {
 }
 
 .input-fields {
-  background-color: var(--primary-highlight-color);
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
-  padding: 30px;
   border-radius: 5px;
   min-width: 90%;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 input {
@@ -208,4 +205,19 @@ input:hover,
 input:active,
 .ui-selectmenu-button:active {
   transform: translateY(5%);
+}
+
+#dialog-form.ui-dialog-content {
+  padding: 10px;
+  background-color: var(--primary-highlight-color);
+}
+
+.ui-dialog:has(#dialog-form) {
+  padding: 3px;
+  border: none;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.ui-dialog:has(#dialog-confirm) {
+  border: none;
 }
