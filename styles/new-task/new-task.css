@@ -65,11 +65,16 @@ button {
   font-family: inherit;
   font-size: 1.2rem;
   font-weight: bold;
-  transition: all 0.15s;
+  transition-duration: 50ms;
 }
 
 button:hover {
-  box-shadow: inset 0 0 0 2px #6a8532, 0 0 0 2px #6a8532, inset 0 0 5px #6a8532, 0 0 5px #6a8532;
+  outline: 2px solid var(--secondary-text-color);
+  z-index: 100;
+}
+
+button:active {
+  transform: translateY(5%);
 }
 
 :focus {
@@ -107,4 +112,20 @@ div.alert p {
   div.alert {
     grid-column: span 1;
   }
+}
+
+input,
+.ui-selectmenu-button {
+  transition: outline 50ms, transform 50ms;
+}
+
+input:hover,
+.ui-selectmenu-button:hover {
+  outline: 2px solid var(--secondary-text-color);
+  z-index: 100;
+}
+
+input:active,
+.ui-selectmenu-button:active {
+  transform: translateY(5%);
 }

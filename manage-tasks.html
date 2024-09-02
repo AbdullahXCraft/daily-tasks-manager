@@ -32,25 +32,36 @@
       <p>Rearrange, Delete and Edit Tasks</p>
     </header>
     <main>
-      <section class="task-info">
-        <div class="task-details">
-          <h3 id="task-name">Preview Task</h6>
-          <p id="task-desc">Preview Description</p>
-        </div>
-        <div class="action-list">
-          <button class="edit-action">Edit</button>
-          <button class="move-up-action"><i class="fa-solid fa-angle-up"></i></button>
-          <button class="remove-action">Remove</button>
-          <button class="move-down-action"><i class="fa-solid fa-angle-down"></i></button>
-        </div>
-      </section>
     </main>
     <footer>
       <p>Made by Abdullah Babrahem in 2024.</p>
     </footer>
     <div id="dialog-confirm" title="Remove Task?">
       <i class="fa-solid fa-triangle-exclamation"></i>
-      <p>This task and all its data including all data about previous days will be permanently deleted and cannot be recovered. Are you sure?</p>
+      <p>This task and all its data including previous days will be permanently removed and cannot be retrieved. Are you sure?</p>
+    </div>
+    <div id="dialog-form" title="Edit Task Details">
+      <section class="input-fields">
+        <input type="text" id="task-name-input" placeholder="Enter task name">
+        <input type="text" id="task-desc-input" placeholder="Enter task description (optional)">
+        <select class="task-repeat" id="task-repeat">
+          <option disabled="" selected="">Repeat Every</option>
+          <option value="day">Every Day</option>
+          <option value="week">Every Week</option>
+          <option value="month">Every Month</option>
+        </select>
+        <select class="task-repeat" id="task-repeat-every">
+          <option disabled="" selected="">Unavailable</option>
+        </select>
+        <div class="buttons">
+          <button>Save</button>
+          <button>Cancel</button>
+        </div>
+        <div class="alert alert-error">
+          <i id="alert-icon" class="fa-solid fa-triangle-exclamation"></i>
+          <p id="alert-message">All non optional fields must be filled.</p>
+        </div>
+      </section>
     </div>
   </body>
 </html>

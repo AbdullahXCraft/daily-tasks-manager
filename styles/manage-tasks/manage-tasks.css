@@ -58,3 +58,154 @@ button:active {
 #dialog-confirm i {
   font-size: 3rem;
 }
+
+.task-details {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-details div:last-child {
+  padding-right: 20px;
+  width: 150px;
+}
+
+.task-details p,
+.task-details h3 {
+  line-height: 0.5em;
+  text-align: start;
+}
+
+.task-details p:empty,
+.task-details h3:has( + p:empty) {
+  line-height: initial;
+}
+
+@media screen and (max-width: 700px) {
+  .task-details {
+    flex-direction: column;
+  }
+
+
+  .task-details div:last-child {
+    padding-right: 0;
+  }
+}
+
+.input-fields {
+  background-color: var(--primary-highlight-color);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 30px;
+  border-radius: 5px;
+  min-width: 90%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+input {
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  border: none;
+  border-left: 8px solid var(--primary-text-color);
+  border-radius: 4px;
+  padding-left: 14px;
+}
+
+.overflow {
+  height: 200px;
+}
+
+.ui-selectmenu-button {
+  background: none !important;
+  font-family: inherit !important;
+  font-size: 1.2rem !important;
+  height: 50px !important;
+  background-color: var(--primary-color) !important;
+  color: var(--primary-text-color) !important;
+  border: none !important;
+  border-left: 8px solid var(--primary-text-color) !important;
+  border-radius: 4px !important;
+  padding-left: 14px !important;
+  width: 100% !important;
+}
+
+.ui-state-disabled {
+  opacity: 0.5 !important;
+}
+
+input::placeholder {
+  color: var(--primary-text-color);
+  font-weight: bold;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+}
+
+.buttons button:last-child {
+  background-color: #f94144;
+  color: var(--secondary-text-color);
+}
+
+.input-fields button {
+  border-radius: 4px;
+  height: 50px;
+  background-color: #5fad56;
+  color: var(--secondary-text-color);
+  border: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+:focus {
+  outline: none;
+}
+
+div.alert {
+  grid-column: span 1;
+  text-align: start;
+  padding: 4px 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: start;
+  column-gap: 10px;
+  align-items: center;
+}
+
+div.alert p {
+  display: inline-block;
+  margin-left: 10px;
+  color: var(--primary-text-color);
+}
+
+div.alert i {
+  color: var(--primary-text-color);
+}
+
+.alert-error {
+  background-color: #f94144;
+}
+
+input,
+.ui-selectmenu-button {
+  transition: outline 50ms, transform 50ms;
+}
+
+input:hover,
+.ui-selectmenu-button:hover {
+  outline: 2px solid var(--secondary-text-color);
+  z-index: 100;
+}
+
+input:active,
+.ui-selectmenu-button:active {
+  transform: translateY(5%);
+}
