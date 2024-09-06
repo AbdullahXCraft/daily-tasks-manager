@@ -31,7 +31,7 @@ $(function () {
   }
 
   function isDone (task) {
-    return task.done.includes(dayjs().format('DD/MM/YYYY')) ? 'checked="checked"' : '';
+    return task.done.includes(dayjs().format('YYYY-MM-DD')) ? 'checked="checked"' : '';
   }
 
   $('input[type="checkbox"]').each((index, element) => {

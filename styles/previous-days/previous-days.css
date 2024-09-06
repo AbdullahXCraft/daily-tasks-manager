@@ -1,0 +1,43 @@
+section {
+  width: 90%;
+  background-color: var(--primary-text-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#myChart {
+  color: var(--primary-color);
+  font-size: 24px;
+}
+
+section .control {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.control button {
+  border: none;
+  font-family: inherit;
+  padding: 4px 10px;
+  font-size: 1.2rem;
+  background-color: var(--secondary-highlight-color);
+  color: var(--secondary-text-color);
+  border-radius: 4px;
+  transition-duration: 50ms;
+}
+
+.control button:hover {
+  outline: 2px solid var(--secondary-text-color);
+  z-index: 100;
+}
+
+.control button:active {
+  transform: translateY(5%);
+}
+
+@media screen and (max-width: 600px) {
+  section  {
+    min-width: 100%;
+  }
+}

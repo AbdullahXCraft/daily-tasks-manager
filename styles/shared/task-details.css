@@ -23,3 +23,9 @@ section.task-info {
 section.task-details .container {
   margin-right: 20px;
 }
+
+@media screen and (max-width: 600px) {
+  .task-info {
+    min-width: 100%;
+  }
+}

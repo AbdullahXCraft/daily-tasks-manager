@@ -16,7 +16,7 @@ export class TaskRecord {
   }
 
   #loadFromStorage() {
-    this.taskItems = JSON.parse(localStorage.getItem(this.#localStorageKey)) || [{"taskName":"Do Laundry","taskDesc":"Ps don't forget to clean the ropes","taskRepeat":"day","taskRepeatEvery":null,"done":['01/09/2024']}];
+    this.taskItems = JSON.parse(localStorage.getItem(this.#localStorageKey)) || [{"taskName":"Do Laundry","taskDesc":"Ps don't forget to clean the ropes","taskRepeat":"day","taskRepeatEvery":null,"done":['2024-09-01']}];
   }
 
   addTask(taskName, taskDesc, taskRepeat, taskRepeatEvery) {
@@ -73,10 +73,10 @@ export class TaskRecord {
   }
 
   toggleDone(index) {
-    if (this.taskItems[index].done.includes(dayjs().format('DD/MM/YYYY'))) {
-      this.taskItems[index].done.splice(this.taskItems[index].done.indexOf(dayjs().format('DD/MM/YYYY')), 1);
+    if (this.taskItems[index].done.includes(dayjs().format('YYYY-MM-DD'))) {
+      this.taskItems[index].done.splice(this.taskItems[index].done.indexOf(dayjs().format('YYYY-MM-DD')), 1);
     } else {
-      this.taskItems[index].done.push(dayjs().format('DD/MM/YYYY'));
+      this.taskItems[index].done.push(dayjs().format('YYYY-MM-DD'));
     }
     this.saveToStorage();
   }
@@ -101,6 +101,14 @@ export class TaskRecord {
       }
       return 'Every ' + task.taskRepeatEvery + ordinalSuffix;
     }
+  }
+
+  getTaskData(index) {
+    let values = [];
+    this.taskItems[index].done.forEach(element => {
+      values.push([element, 1]);
+    });
+    return values;
   }
 
   saveToStorage() {

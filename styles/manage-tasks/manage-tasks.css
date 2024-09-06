@@ -20,22 +20,23 @@ button:active {
   transform: translateY(5%);
 }
 
+button {
+  color: var(--secondary-text-color);
+}
+
 .remove-action {
   background-color: #f94144;
-  color: var(--secondary-text-color);
   border-bottom-left-radius: 5px;
 }
 
 .edit-action {
   background-color: var(--secondary-highlight-color);
-  color: var(--secondary-text-color);
   border-top-left-radius: 5px;
 }
 
 .move-up-action,
 .move-down-action {
   background-color: var(--primary-highlight-color);
-  color: var(--primary-text-color);
 }
 
 .move-up-action {

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="scripts/fontawesome/solid.min.js"></script>
+    <script defer src="scripts/fontawesome/fontawesome.min.js"></script>
+    <link rel="stylesheet" href="styles/shared/shared.css">
+    <link rel="stylesheet" href="styles/previous-days/previous-days.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="styles/jquery-ui.theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js" integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="https://cdn.zingchart.com/zingchart.jquery.min.js"></script>
+    <script src="scripts/previous-days.js" type="module"></script>
+    <title>Daily Task Manager: Previous Days</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html"><i class="fa-solid fa-house"></i> &vert; Home</a>
+      <a href="/new-task.html">New Task</a>
+      <a href="/manage-tasks.html">Manage Tasks</a>
+      <a class="active" href="/previous-days.html">Previous Days</a>
+      <a href="">Info</a>
+    </nav>
+    <header>
+      <h1>Previous Days</h1>
+      <p>Track your progress.</p>
+    </header>
+    <main>
+      <section>
+        <div class="control">
+          <button id="prev-year"><i class="fa-solid fa-chevron-left"></i></button>
+          <select id="task-select">
+            <option value="" disabled="" selected="">Select Task</option>
+          </select>
+          <button id="next-year"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div id="myChart"></div> 
+      </section>
+    </main>
+    <footer>
+      <p>Made by Abdullah Babrahem in 2024.</p>
+    </footer>
+  </body>
+</html>
