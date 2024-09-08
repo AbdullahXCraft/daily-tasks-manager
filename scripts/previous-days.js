@@ -163,7 +163,7 @@ $(function () {
             mediaRules: [
               {
                 minWidth: 580,
-                marginTop: 0
+                marginTop: '10%'
               }
             ]
           }
