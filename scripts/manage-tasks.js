@@ -1,13 +1,6 @@
 import { TaskRecord } from "./tasks.js";
 
 $(function () {
-  function addState() {
-    let stateObj = { id: "100" };
-
-    window.history.pushState(stateObj,
-        "Manage Tasks", "/manage-tasks");
-  }
-  addState();  
   const tasks = new TaskRecord('tasks');
   loadTasks();
   $( "#dialog-confirm" ).dialog({

@@ -1,13 +1,6 @@
 import { TaskRecord } from "./tasks.js";
 
 $(function () {
-  function addState() {
-    let stateObj = { id: "100" };
-
-    window.history.pushState(stateObj,
-        "Previous Tasks", "/previous-tasks");
-  }
-  addState(); 
   const tasks = new TaskRecord('tasks');
   tasks.taskItems.forEach((element, index) => {
     $('#task-select').append(`<option value="${index}">${element.taskName}</option>`)
