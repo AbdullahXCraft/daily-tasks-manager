@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="43.3492mm" height="43.3492mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 4335 4335" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   
+    .fil4 {fill:none}
+    .fil2 {fill:#F8BC91}
+    .fil3 {fill:#33CC66;fill-rule:nonzero}
+    .fil0 {fill:#F3D3B6;fill-rule:nonzero}
+    .fil1 {fill:white;fill-rule:nonzero}
+   
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+  <g id="_581293400">
+   <path class="fil0" d="M266 204c-146,0 -266,120 -266,267l7 2528 0 0 857 73 85 870 0 0 2321 7c73,0 140,-30 188,-78l0 0c1,-2 2,-3 3,-4 47,-48 75,-113 75,-185l0 -3211c0,-74 -30,-140 -78,-189 -48,-48 -115,-78 -188,-78 -2045,0 1,0 -3004,0z" id="id_101"></path>
+   <path class="fil1" d="M3016 1041c31,0 56,-25 56,-56 0,-30 -25,-55 -56,-55l-2496 0c-30,0 -55,25 -55,55 0,31 25,56 55,56l2496 0z" id="id_102"></path>
+   <path class="fil1" d="M3016 1477c31,0 56,-25 56,-55 0,-31 -25,-56 -56,-56l-2496 0c-30,0 -55,25 -55,56 0,30 25,55 55,55l2496 0z" id="id_103"></path>
+   <path class="fil1" d="M3016 1914c31,0 56,-25 56,-56 0,-30 -25,-55 -56,-55l-2496 0c-30,0 -55,25 -55,55 0,31 25,56 55,56l2496 0z" id="id_104"></path>
+   <path class="fil1" d="M3016 2350c31,0 56,-25 56,-55 0,-31 -25,-56 -56,-56l-2496 0c-30,0 -55,25 -55,56 0,30 25,55 55,55l2496 0z" id="id_105"></path>
+   <path class="fil1" d="M3016 2787c31,0 56,-25 56,-56 0,-31 -25,-55 -56,-55l-1844 0c-30,0 -55,24 -55,55 0,31 25,56 55,56l1844 0z" id="id_106"></path>
+   <path class="fil1" d="M3016 3223c31,0 56,-25 56,-55 0,-31 -25,-56 -56,-56l-1844 0c-30,0 -55,25 -55,56 0,30 25,55 55,55l1844 0z" id="id_107"></path>
+   <polygon class="fil2" points="7,2999 949,2999 949,3942 " id="id_108"></polygon>
+   <path class="fil3" d="M3110 1680c338,0 644,137 866,359 222,222 359,528 359,866 0,339 -137,645 -359,867 -222,222 -528,359 -866,359 -339,0 -645,-137 -867,-359 -221,-222 -359,-528 -359,-867 0,-338 138,-644 359,-866 222,-222 528,-359 867,-359z" id="id_109"></path>
+   <polyline class="fil4" points="2373,2678 2548,3280 3846,2531 " id="id_110"></polyline>
+   <path class="fil1" d="M2430 2661c-9,-31 -42,-49 -73,-40 -32,9 -50,42 -41,73l175 603 57 -17 -57 17c9,31 42,49 74,40 6,-2 12,-5 18,-8l1292 -747c29,-16 39,-52 22,-81 -16,-28 -52,-38 -81,-22l-1232 712 -154 -530z" id="id_111"></path>
+  </g>
+ </g>
+</svg>
