@@ -1,5 +1,12 @@
 import { TaskRecord } from "./tasks.js";
 $(function () {
+  function addState() {
+    let stateObj = { id: "100" };
+
+    window.history.pushState(stateObj,
+        "New Task", "/new-task");
+  }
+  addState(); 
   $('.alert').fadeOut(0);
   const tasks = new TaskRecord('tasks');
   $('#task-repeat').selectmenu({
