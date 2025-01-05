@@ -12,7 +12,7 @@ section.task-info {
 
 #task-name,
 #task-desc {
-  line-height: 0.5em;
+  line-height: 1em;
   text-align: start;
 }
 
